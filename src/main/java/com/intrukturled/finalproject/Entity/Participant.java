@@ -25,6 +25,7 @@ public class Participant {
     private String phoneNumber;
     private String address;
 
+
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false,updatable = false, name = "join_date")
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss a", timezone = "Asia/Jakarta")
