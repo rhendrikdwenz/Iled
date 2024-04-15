@@ -8,4 +8,8 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class ParticipantResponse {
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String address;
 }
