@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Data
 @Builder
@@ -21,4 +21,6 @@ public class ActivityRequest {
 
     @NotNull(message = "End time must not be null")
     private Date endTime;
+
+    private String notes;
 }

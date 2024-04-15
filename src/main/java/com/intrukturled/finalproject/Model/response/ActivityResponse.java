@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Data
 @Builder
@@ -16,4 +16,5 @@ public class ActivityResponse {
     private Date date;
     private Date startTime;
     private Date endTime;
+    private String notes;
 }
