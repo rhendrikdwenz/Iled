@@ -17,9 +17,15 @@ public class Questions {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID )
     private String id;
+
     private String questions;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "participant_id")
     private Participant participant;
+
     private Date dateQuestions;
+
     @Enumerated(EnumType.STRING)
     private QuestionStatus questionStatus;
 }
