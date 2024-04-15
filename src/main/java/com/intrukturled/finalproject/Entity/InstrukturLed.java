@@ -1,5 +1,6 @@
 package com.intrukturled.finalproject.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,6 +17,9 @@ public class InstrukturLed {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Jakarta")
     private Date date;
 
     @ManyToOne(cascade = CascadeType.ALL)
