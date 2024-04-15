@@ -1,8 +1,5 @@
 package com.intrukturled.finalproject.Model.request;
 
-import com.intrukturled.finalproject.Entity.Participant;
-import com.intrukturled.finalproject.Entity.Questions;
-import com.intrukturled.finalproject.Entity.Trainer;
 import lombok.*;
 
 import java.util.Date;
