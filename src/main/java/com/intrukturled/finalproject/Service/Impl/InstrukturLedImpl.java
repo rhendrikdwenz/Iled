@@ -37,6 +37,7 @@ public class InstrukturLedImpl implements InstruktureLedService {
                 .trainer(trainer)
                 .participant(participant)
                 .questions(questions)
+                .additionalQuestions(instrukturLedRequest.getAdditionalQuestions())
                 .build();
         return instrukturLedRepository.saveAndFlush(instrukturLed);
     }
