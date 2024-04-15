@@ -1,6 +1,5 @@
 package com.intrukturled.finalproject.Model.response;
 
-import com.intrukturled.finalproject.Constant.EQuestion;
 import com.intrukturled.finalproject.Entity.Activity;
 import com.intrukturled.finalproject.Entity.User;
 import lombok.AllArgsConstructor;
@@ -12,10 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class QuestionsResponse {
-    private String id;
-    private User participant;
-    private String content;
-    private EQuestion status;
+public class AttendanceResponse {
+    private Long id;
+    private User user;
     private Activity activity;
+    private boolean present;
 }
