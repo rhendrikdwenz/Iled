@@ -1,7 +1,6 @@
 package com.intrukturled.finalproject.Controller;
 
 import com.intrukturled.finalproject.Entity.InstrukturLed;
-import com.intrukturled.finalproject.Model.WebResponse;
 import com.intrukturled.finalproject.Model.request.InstrukturLedRequest;
 import com.intrukturled.finalproject.Service.InstruktureLedService;
 import jakarta.validation.Valid;
