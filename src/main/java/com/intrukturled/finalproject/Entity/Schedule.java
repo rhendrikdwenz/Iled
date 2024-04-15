@@ -1,8 +1,10 @@
 package com.intrukturled.finalproject.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.intrukturled.finalproject.Constant.StatusSchedule;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Date;
 
 @Getter
 @Setter
@@ -12,4 +14,13 @@ import lombok.*;
 @Builder
 @Table(name="schedule")
 public class Schedule {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+    private Date date;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "trainer_id")
+    private Trainer trainer;
+    @Enumerated(EnumType.STRING)
+    private StatusSchedule statusSchedule;
 }
