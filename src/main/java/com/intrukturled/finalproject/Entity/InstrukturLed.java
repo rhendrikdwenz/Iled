@@ -36,5 +36,8 @@ public class InstrukturLed {
 
     private String additionalQuestions;
 
+    @Lob
+    private byte[] screenshot;
+
 
 }

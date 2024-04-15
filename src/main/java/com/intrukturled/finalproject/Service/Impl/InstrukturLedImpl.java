@@ -11,7 +11,11 @@ import com.intrukturled.finalproject.Service.ParticipantService;
 import com.intrukturled.finalproject.Service.QuestionsService;
 import com.intrukturled.finalproject.Service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Optional;
 
 @Service
 public class InstrukturLedImpl implements InstruktureLedService {
@@ -37,4 +41,15 @@ public class InstrukturLedImpl implements InstruktureLedService {
         return instrukturLedRepository.saveAndFlush(instrukturLed);
     }
 
+    @Override
+    public InstrukturLed getById(String id) {
+        Optional<InstrukturLed> optionalInstrukturLed = instrukturLedRepository.findById(id);
+        if (optionalInstrukturLed.isPresent()) return optionalInstrukturLed.get();
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Instruktur Led with id : " + id + " Not Found");
+    }
+
+    @Override
+    public InstrukturLed updateInstrukturLed(InstrukturLed instrukturLed) {
+        return instrukturLedRepository.save(instrukturLed);
+    }
 }
