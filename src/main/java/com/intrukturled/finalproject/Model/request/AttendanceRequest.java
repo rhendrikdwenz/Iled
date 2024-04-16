@@ -1,5 +1,7 @@
 package com.intrukturled.finalproject.Model.request;
 
+import com.intrukturled.finalproject.Entity.Activity;
+import com.intrukturled.finalproject.Entity.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -14,10 +16,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AttendanceRequest {
-    @NotNull(message = "participant must not be blank")
-    private String participantId;
+   // @NotNull(message = "participant must not be blank")
+    private String userId;
 
-    @NotNull(message = "Activity ID must not be null")
+   // @NotNull(message = "Activity ID must not be null")
     private String activityId;
 
     @NotNull(message = "Present flag must not be null")

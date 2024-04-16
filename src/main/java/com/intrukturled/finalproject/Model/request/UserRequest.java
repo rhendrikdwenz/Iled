@@ -6,20 +6,24 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRequest {
-    @NotBlank(message = "Name is required")
-    @Size(max = 100, message = "Name cannot exceed 100 characters")
+//    @NotBlank(message = "Name is required")
+//    @Size(max = 100, message = "Name cannot exceed 100 characters")
     private String name;
 
-    @NotBlank(message = "Address is required")
-    @Size(max = 255, message = "Address cannot exceed 255 characters")
+//    @NotBlank(message = "Address is required")
+//    @Size(max = 255, message = "Address cannot exceed 255 characters")
     private String address;
 
-    @NotBlank(message = "Email is required")
-    @Email(message = "Invalid email format")
+//    @NotBlank(message = "Email is required")
+//    @Email(message = "Invalid email format")
     private String email;
+
+    private Set<Long> roleId;
 }
